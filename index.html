@@ -117,7 +117,7 @@
                 <p id="cp"><input id="icp4" type="text"  class="m-2" placeholder="Digite o TELEFONE" style="display:none; width: 300px;"></p>
                 <p id="cp"><input id="icp5" type="text"  class="m-2" placeholder="Digite o que deseja procurar" style="display:none; width: 300px;"></p>
                 <p class="cp"><input id="icp6" type="text" class="m-2" placeholder="Digite o id do dado que deseja deletar" style="display:none; width: 300px;"></p>
-                <p id="cp"><input id="atu1" type="file"  class="m-2" placeholder="Digite o que deseja procurar" style="display:none; width: 300px;"></p>
+                <p id="atu"><input id="atu1" type="file"  class="m-2" placeholder="Digite o que deseja procurar" style="display:none; width: 300px;"></p>
                 <p><button id="atu2" class="btn bg-dark border m-1 vai" style="color: white; display: none;" onclick="vai()">Vai!</button></p>
             </div>
 
@@ -183,6 +183,7 @@
             document.getElementById("atu2").style.display = "none"
         }
         function atualizar() {
+            document.getElementById("cp").style.display = "none"
             document.getElementById("atu1").style.display = "block"
             document.getElementById("atu2").style.display = "block"
             document.getElementById("icp1").style.display = "none"
