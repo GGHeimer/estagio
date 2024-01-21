@@ -111,14 +111,17 @@
                 </button>
                 <div>
                 <p id="cp" class="mt-3 ms-2"></p>
+                <p id="atu" class="mt-3 ms-2"></p>
                 <p id="cp"><input id="icp1" type="text"  class="m-2" placeholder="Digite o ID" style="display: none; width: 300px;"></p>
                 <p id="cp"><input id="icp2" type="text"  class="m-2" placeholder="Digite o NOME" style="display: none; width: 300px;"></p>
                 <p id="cp"><input id="icp3" type="text"  class="m-2" placeholder="Digite o E-MAIL" style="display: none; width: 300px;"></p>
                 <p id="cp"><input id="icp4" type="text"  class="m-2" placeholder="Digite o TELEFONE" style="display:none; width: 300px;"></p>
                 <p id="cp"><input id="icp5" type="text"  class="m-2" placeholder="Digite o que deseja procurar" style="display:none; width: 300px;"></p>
-                <p class="cp"><input id="icp6" type="text" class="m-2" placeholder="Digite o id do dado que deseja deletar" style="display:none; width: 300px;"></p>
-                <p id="atu"><input id="atu1" type="file"  class="m-2" placeholder="Digite o que deseja procurar" style="display:none; width: 300px;"></p>
-                <p><button id="atu2" class="btn bg-dark border m-1 vai" style="color: white; display: none;" onclick="vai()">Vai!</button></p>
+                <p><input id="icp6" type="text" class="m-2" placeholder="Digite o id do dado que deseja deletar" style="display:none; width: 300px;"></p>
+                <p><input id="atu1" type="file"  class="m-2" style="display:none; width: 300px;"></p>
+                <p id="form" class="m-1">Se preferir, preencha este formulário para atualizar os dados referentes ao respectivo ID.<a href="https://docs.google.com/forms/d/e/1FAIpQLSd1e_IQTArwd8C59dJlfe__clc5Rd_irVshkeqO3dfA9ZwnQQ/viewform?usp=sf_link">Link</a></p>
+                <p><button id="atu2" class="btn bg-dark border m-1 enviar" style="color: white;" onclick="enviar()">Enviar!</button></p>
+                <p id="enviado"></p>
             </div>
 
             </div>
@@ -170,6 +173,8 @@
             document.getElementById("icp6").style.display = "none"
             document.getElementById("atu1").style.display = "none"
             document.getElementById("atu2").style.display = "none"
+            document.getElementById("enviar").style.display = "none"
+
         }
         function ler() {
             document.getElementById("cp").innerHTML = "Digite o id, nome, e-mail ou telefone que você deseja procurar."
@@ -181,21 +186,27 @@
             document.getElementById("icp6").style.display = "none"
             document.getElementById("atu1").style.display = "none"
             document.getElementById("atu2").style.display = "none"
+            document.getElementById("enviar").style.display = "none"
         }
         function atualizar() {
-            document.getElementById("cp").style.display = "none"
             document.getElementById("atu1").style.display = "block"
             document.getElementById("atu2").style.display = "block"
+            document.getElementById("atu").innerHTML = "Faça upload da planilha excel ou google sheets"
+            document.getElementById("cp").style.display = "none"
             document.getElementById("icp1").style.display = "none"
             document.getElementById("icp2").style.display = "none"
             document.getElementById("icp3").style.display = "none"
             document.getElementById("icp4").style.display = "none"
             document.getElementById("icp5").style.display = "none"
             document.getElementById("icp6").style.display = "none"
+            document.getElementById("enviado").style.display = "none"
         }
-        function vai () {
-            document.getElementById("vai").innerHTML = "Sua tabela foi atualizada com base na planilha excel cadastrada."
+        function enviar () {
+            document.getElementById("enviado").innerHTML = "Sua tabela foi atualizada com base na planilha excel cadastrada."
+            document.getElementById("atu").style.display = "none"
             document.getElementById("atu1").style.display = "none"
+            document.getElementById("atu2").style.display = "none"
+            document.getElementById("form").style.display = "none"
         }
         function deletar() {
             document.getElementById("cp").innerHTML = "Digite o id do item que deseja excluir da tabela."
@@ -207,6 +218,7 @@
             document.getElementById("icp6").style.display = "block"
             document.getElementById("atu1").style.display = "none"
             document.getElementById("atu2").style.display = "none"
+            document.getElementById("enviar").style.display = "none"
         }
     </script>
 </body>
