@@ -109,7 +109,13 @@
                 <button id="d" class="btn bg-primary border m-1">
                     Deletar
                 </button>
+                <div>
                 <p id="cp" class="p-3"></p>
+                <p id="cp"><input id="cp" type="text"  class="m-2" placeholder="Digite o ID" style="display: none"></p>
+                <p id="cp"><input id="cp" type="text"  class="m-2" placeholder="Digite o NOME" style="display: none"></p>
+                <p id="cp"><input id="cp" type="text"  class="m-2" placeholder="Digite o E-MAIL" style="display: none"></p>
+                <p id="cp"><input id="cp" type="text"  class="m-2" placeholder="Digite o TELEFONE" style="display:none"></p>
+            </div>
 
             </div>
             </div>
@@ -151,7 +157,8 @@
         crossorigin="anonymous"></script>
     <script>
         function criar() {
-            document.getElementById("cp").innerHTML = "Digite os valores correspondentes aos campos no formulário ao lado."
+            document.getElementById("cp").innerHTML = "Digite os valores correspondentes aos campos no formulário abaixo."
+            document.getElementById("cp").ariaHidden = type="show"
         }
         function ler() {
             document.getElementById("cp").innerHTML = "Sua tabela foi atualizada com base na planilha excel cadastrada."
@@ -161,17 +168,6 @@
         }
         function deletar() {
             document.getElementById("cp").innerHTML = "Sua tabela foi atualizada com base na planilha excel cadastrada."
-        }
-        function addRow() {
-            var table = document.getElementById('table');
-            var row = table.insertRow(0);
-            var cell1 = row.insertCell(0);
-            var cell2 = row.insertCell(1);
-            var cell3 = row.insertCell(2);
-            var cell4 = row.insertCell(3);
-            var cell5 = row.insertCell(4);
-            cell4.innerHTML = "<button onclick= '//function'>Change color</button>";
-            cell5.innerHTML = "<button onclick='//function'>Delete row</button>";
         }
     </script>
 </body>
