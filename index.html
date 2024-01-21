@@ -119,7 +119,7 @@
                 <p id="cp"><input id="icp5" type="text"  class="m-2" placeholder="Digite o que deseja procurar" style="display:none; width: 300px;"></p>
                 <p><input id="icp6" type="text" class="m-2" placeholder="Digite o id do dado que deseja deletar" style="display:none; width: 300px;"></p>
                 <p><input id="atu1" type="file"  class="m-2" style="display:none; width: 300px;"></p>
-                <p id="form" class="m-1">Se preferir, preencha este formulário para atualizar os dados referentes ao respectivo ID.<a href="https://docs.google.com/forms/d/e/1FAIpQLSd1e_IQTArwd8C59dJlfe__clc5Rd_irVshkeqO3dfA9ZwnQQ/viewform?usp=sf_link">Link</a></p>
+                <p id="form" class="m-1" style="display:none">Se preferir, preencha este formulário para criar, atualizar u deletar os dados referentes ao respectivo ID.<a href="https://docs.google.com/forms/d/e/1FAIpQLSd1e_IQTArwd8C59dJlfe__clc5Rd_irVshkeqO3dfA9ZwnQQ/viewform?usp=sf_link">Link</a></p>
                 <p><button id="atu2" class="btn bg-dark border m-1 enviar" style="color: white;" onclick="enviar()">Enviar!</button></p>
                 <p id="enviado"></p>
             </div>
@@ -174,6 +174,7 @@
             document.getElementById("atu1").style.display = "none"
             document.getElementById("atu2").style.display = "none"
             document.getElementById("enviar").style.display = "none"
+            document.getElementById("form").style.display = "none"
 
         }
         function ler() {
@@ -187,6 +188,7 @@
             document.getElementById("atu1").style.display = "none"
             document.getElementById("atu2").style.display = "none"
             document.getElementById("enviar").style.display = "none"
+            document.getElementById("form").style.display = "none"
         }
         function atualizar() {
             document.getElementById("atu1").style.display = "block"
@@ -200,6 +202,7 @@
             document.getElementById("icp5").style.display = "none"
             document.getElementById("icp6").style.display = "none"
             document.getElementById("enviado").style.display = "none"
+            document.getElementById("form").style.display = "block"
         }
         function enviar () {
             document.getElementById("enviado").innerHTML = "Sua tabela foi atualizada com base na planilha excel cadastrada."
@@ -219,6 +222,7 @@
             document.getElementById("atu1").style.display = "none"
             document.getElementById("atu2").style.display = "none"
             document.getElementById("enviar").style.display = "none"
+            document.getElementById("form").style.display = "none"
         }
     </script>
 </body>
