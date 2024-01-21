@@ -100,21 +100,21 @@
                 <button id="c" class="btn bg-primary border m-1" onclick="criar()">
                     Criar
                 </button>
-                <button id="r" class="btn bg-primary border m-1">
+                <button id="r" class="btn bg-primary border m-1" onclick="ler()">
                     Ler
                 </button>
                 <button id="u" class="btn bg-primary border m-1" onclick="atualizar()">
                     Atualizar
                 </button>
-                <button id="d" class="btn bg-primary border m-1">
+                <button id="d" class="btn bg-primary border m-1" onclick="deletar()">
                     Deletar
                 </button>
                 <div>
                 <p id="cp" class="p-3"></p>
-                <p id="cp"><input id="cp" type="text"  class="m-2" placeholder="Digite o ID" style="display: none"></p>
-                <p id="cp"><input id="cp" type="text"  class="m-2" placeholder="Digite o NOME" style="display: none"></p>
-                <p id="cp"><input id="cp" type="text"  class="m-2" placeholder="Digite o E-MAIL" style="display: none"></p>
-                <p id="cp"><input id="cp" type="text"  class="m-2" placeholder="Digite o TELEFONE" style="display:none"></p>
+                <p id="cp"><input id="icp1" type="text"  class="m-2" placeholder="Digite o ID" style="display: none"></p>
+                <p id="cp"><input id="icp2" type="text"  class="m-2" placeholder="Digite o NOME" style="display: none"></p>
+                <p id="cp"><input id="icp3" type="text"  class="m-2" placeholder="Digite o E-MAIL" style="display: none"></p>
+                <p id="cp"><input id="icp4" type="text"  class="m-2" placeholder="Digite o TELEFONE" style="display:none"></p>
             </div>
 
             </div>
@@ -158,16 +158,19 @@
     <script>
         function criar() {
             document.getElementById("cp").innerHTML = "Digite os valores correspondentes aos campos no formulário abaixo."
-            document.getElementById("cp").ariaHidden = type="show"
+            document.getElementById("icp1").style.display = "block"
+            document.getElementById("icp2").style.display = "block"
+            document.getElementById("icp3").style.display = "block"
+            document.getElementById("icp4").style.display = "block"
         }
         function ler() {
-            document.getElementById("cp").innerHTML = "Sua tabela foi atualizada com base na planilha excel cadastrada."
+            document.getElementById("cp").innerHTML = "Digite o id, nome, e-mail ou telefone que você deseja procurar."
         }
         function atualizar() {
             document.getElementById("cp").innerHTML = "Sua tabela foi atualizada com base na planilha excel cadastrada."
         }
         function deletar() {
-            document.getElementById("cp").innerHTML = "Sua tabela foi atualizada com base na planilha excel cadastrada."
+            document.getElementById("cp").innerHTML = "SDigite o id do item que deseja excluir da tabela."
         }
     </script>
 </body>
